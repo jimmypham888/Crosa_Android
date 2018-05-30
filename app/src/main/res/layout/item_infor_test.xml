@@ -1,0 +1,103 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_calandar_interview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:background="#192244"
+        android:textColor="@android:color/white"
+        android:text="2.THÔNG TIN TK TEST TIẾNG ANH"/>
+    <RelativeLayout
+        android:id="@+id/ln_item_infor_test"
+        android:background="#b6b6b6"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_calandar_interview"
+        android:layout_height="30dp">
+        <TextView
+            android:id="@+id/item_calenar_interview_date"
+            android:layout_width="90dp"
+            android:text="Ngày"
+            android:textSize="14sp"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/v_1"
+            android:layout_width="1dp"
+            android:background="#a49898"
+            android:layout_toRightOf="@+id/item_calenar_interview_date"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/item_calenar_interview_hour"
+            android:layout_width="200dp"
+            android:text="Tài khoản"
+            android:layout_toRightOf="@+id/v_1"
+            android:gravity="center"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content" />
+        <View
+            android:id="@+id/v_2"
+            android:layout_toRightOf="@+id/item_calenar_interview_hour"
+            android:layout_width="1dp"
+            android:background="#a49898"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/item_calenar_interview_teacher"
+            android:layout_width="match_parent"
+            android:text="Mật khẩu"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/v_2"
+            android:textColor="@android:color/black"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+    <RelativeLayout
+        android:id="@+id/ln_item_infor_test_"
+        android:background="#d4d4d4"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/ln_item_infor_test"
+        android:layout_height="30dp">
+        <TextView
+            android:id="@+id/item_calenar_interview_date_"
+            android:layout_width="90dp"
+            android:text="01/01/2018"
+            android:gravity="center"
+            android:textColor="#554e59"
+            android:layout_height="match_parent" />
+        <View
+            android:id="@+id/v_1_"
+            android:layout_width="1dp"
+            android:background="#a49898"
+            android:layout_toRightOf="@+id/item_calenar_interview_date_"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/item_calenar_interview_hour_"
+            android:layout_width="200dp"
+            android:text="duongdd2@topica"
+            android:layout_toRightOf="@+id/v_1_"
+            android:gravity="center"
+            android:textColor="#554e59"
+            android:layout_height="match_parent" />
+        <View
+            android:id="@+id/v_2_"
+            android:layout_toRightOf="@+id/item_calenar_interview_hour_"
+            android:layout_width="1dp"
+            android:background="#a49898"
+            android:layout_height="match_parent"/>
+        <TextView
+            android:id="@+id/item_calenar_interview_teacher_"
+            android:layout_width="match_parent"
+            android:text="ALEXT 07"
+            android:gravity="center"
+            android:layout_toRightOf="@+id/v_2_"
+            android:textColor="#554e59"
+            android:layout_height="match_parent" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

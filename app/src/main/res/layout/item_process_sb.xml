@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/tv_calandar_interview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:padding="5dp"
+        android:background="#192244"
+        android:textColor="@android:color/white"
+        android:text="5. LỘ TRÌNH SB"/>
+    <TextView
+        android:id="@+id/link_sb"
+        android:layout_width="wrap_content"
+        android:textColor="@android:color/white"
+        android:text="Link SB"
+        android:layout_marginTop="17dp"
+        android:textSize="10sp"
+        android:layout_marginRight="5dp"
+        android:layout_alignParentRight="true"
+        android:layout_height="wrap_content" />
+    <RelativeLayout
+        android:id="@+id/ln_item_infor_test"
+        android:background="#b6b6b6"
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:layout_below="@+id/tv_calandar_interview"
+        android:layout_height="190dp">
+        <TextView
+            android:id="@+id/item_type_sb"
+            android:layout_marginTop="10dp"
+            android:layout_width="wrap_content"
+            android:text="Loại SB"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:textColor="#554e59"
+            android:layout_height="wrap_content" />
+
+        <RelativeLayout
+            android:id="@+id/spinner_type_sb"
+            android:layout_width="match_parent"
+            android:layout_toRightOf="@+id/item_type_sb"
+            android:layout_marginLeft="80dp"
+            android:layout_marginTop="10dp"
+            android:background="@android:color/white"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content" >
+            <Spinner
+                android:id="@+id/spinner_type_sb_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:id="@+id/tv_history_call"
+            android:layout_below="@+id/spinner_type_sb"
+            android:text="Lịch sử gọi lại"/>
+        <EditText
+            android:layout_width="150dp"
+            android:layout_marginLeft="41dp"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="5dp"
+            android:id="@+id/edt_history_call"
+            android:background="@drawable/background_edt_history"
+            android:layout_below="@+id/spinner_type_sb"
+            android:layout_toRightOf="@+id/tv_history_call"/>
+        <EditText
+            android:layout_width="100dp"
+            android:layout_height="wrap_content"
+            android:id="@+id/edt_history_call_1"
+            android:layout_marginTop="5dp"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="10dp"
+            android:layout_alignParentRight="true"
+            android:background="@drawable/background_edt_history"
+            android:layout_below="@+id/spinner_type_sb"
+            android:layout_toRightOf="@+id/edt_history_call"/>
+        <TextView
+            android:id="@+id/item_status_call"
+            android:layout_width="wrap_content"
+            android:text="Trạng thái "
+            android:layout_marginLeft="5dp"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/edt_history_call_1"
+            android:gravity="center"
+            android:textColor="#554e59"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/spinner_status_call"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/edt_history_call_1"
+            android:layout_toRightOf="@+id/item_status_call"
+            android:layout_marginLeft="62dp"
+            android:background="@android:color/white"
+            android:layout_marginRight="10dp"
+            android:layout_height="wrap_content" >
+            <Spinner
+                android:id="@+id/spinner_status_call_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+        <TextView
+            android:id="@+id/item_status_care"
+            android:layout_width="wrap_content"
+            android:layout_marginLeft="5dp"
+            android:text="Trạng thái chăm sóc"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/spinner_status_call"
+            android:gravity="center"
+            android:textColor="#554e59"
+            android:layout_height="wrap_content" />
+        <RelativeLayout
+            android:id="@+id/spinner_status_care"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/spinner_status_call"
+            android:layout_toRightOf="@+id/item_status_care"
+            android:layout_marginLeft="2dp"
+            android:layout_marginRight="10dp"
+            android:background="@android:color/white"
+            android:layout_height="wrap_content" >
+            <Spinner
+                android:id="@+id/spinner_status_care_"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content" />
+        </RelativeLayout>
+
+        <TextView
+            android:id="@+id/item_content"
+            android:layout_width="wrap_content"
+            android:text="Nội dung"
+            android:layout_marginTop="5dp"
+            android:layout_below="@+id/spinner_status_care"
+            android:gravity="center"
+            android:layout_marginLeft="5dp"
+            android:textColor="#554e59"
+            android:layout_height="wrap_content" />
+        <EditText
+            android:id="@+id/tt_content"
+            android:layout_width="match_parent"
+            android:layout_marginTop="5dp"
+            android:maxLines="5"
+            android:layout_below="@+id/spinner_status_care"
+            android:layout_toRightOf="@+id/item_status_care"
+            android:layout_marginLeft="2dp"
+            android:background="@android:color/white"
+            android:backgroundTint="@android:color/white"
+            android:layout_marginRight="10dp"
+            android:layout_height="50dp" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageView
+        android:id="@+id/image_dashboard"
+        android:layout_width="match_parent"
+        android:layout_height="230dp"
+        android:background="@drawable/dashboard_images"
+        android:layout_alignParentTop="true"/>
+    <LinearLayout
+        android:id="@+id/ln_button"
+        android:layout_width="match_parent"
+        android:layout_height="180dp"
+        android:orientation="vertical"
+        android:layout_below="@+id/image_dashboard"
+        android:background="#e7a23f">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_gravity="center"
+            android:layout_marginLeft="70dp"
+            android:layout_marginTop="40dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="5dp"
+            android:background="@drawable/back_ground_button_dashboard"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:gravity="center"
+                android:layout_marginLeft="8dp"
+                android:textColor="@android:color/white"
+                android:text="SỐ LƯỢNG PHẢI GỌI"/>
+            <TextView
+                android:id="@+id/tv_number_call"
+                android:layout_gravity=""
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginTop="9dp"
+                android:layout_marginRight="8dp"
+                android:gravity="center"
+                android:layout_alignParentRight="true"
+                android:layout_marginLeft="20dp"
+                android:background="@drawable/number_dashboard"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:text="20"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="5dp"
+            android:layout_gravity="center_vertical"
+            android:background="@drawable/back_ground_button_dashboard"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="SỐ LƯỢNG "/>
+            <TextView
+                android:id="@+id/tv_number_exits"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="9dp"
+                android:layout_alignParentRight="true"
+                android:gravity="center"
+                android:background="@drawable/number_dashboard"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:text="20"/>
+
+        </RelativeLayout>
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="30dp"
+            android:layout_marginLeft="70dp"
+            android:layout_marginRight="70dp"
+            android:layout_marginBottom="5dp"
+            android:weightSum="2"
+            android:background="@drawable/back_ground_button_dashboard"
+            android:layout_gravity="center_vertical"
+            android:orientation="horizontal">
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:textSize="14sp"
+                android:layout_marginLeft="8dp"
+                android:gravity="center"
+                android:textColor="@android:color/white"
+                android:text="TẤT CẢ"/>
+            <TextView
+                android:id="@+id/tv_all"
+                android:layout_width="15dp"
+                android:layout_height="15dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="8dp"
+                android:layout_marginTop="9dp"
+                android:gravity="center"
+                android:background="@drawable/number_dashboard"
+                android:textSize="12sp"
+                android:textColor="@android:color/white"
+                android:text="20"/>
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/image_profile"
+        android:layout_width="50dp"
+        android:layout_alignParentTop="true"
+        android:layout_height="50dp"
+        android:layout_marginTop="170dp"
+        android:layout_marginLeft="10dp"
+        android:background="@android:color/darker_gray"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_name_profile"
+        android:text="JonSmith"
+        android:layout_marginLeft="5dp"
+        android:textColor="@android:color/white"
+        android:layout_marginTop="175dp"
+        android:textSize="20sp"
+        android:layout_toRightOf="@+id/image_profile"/>
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/tv_email_profile"
+        android:text="JonSmith"
+        android:layout_marginLeft="5dp"
+        android:textColor="@android:color/white"
+        android:layout_toRightOf="@+id/image_profile"
+        android:textSize="10sp"
+        android:layout_below="@+id/tv_name_profile"/>
+
+    <android.support.v7.widget.SearchView
+        android:layout_width="match_parent"
+        android:id="@+id/search_dashboard"
+        android:layout_height="30dp"
+        android:layout_below="@+id/ln_button">
+
+    </android.support.v7.widget.SearchView>
+
+
+</RelativeLayout>

@@ -1,0 +1,36 @@
+<resources>
+    <!-- Default screen margins, per the Android Design guidelines. -->
+    <dimen name="activity_horizontal_margin">16dp</dimen>
+    <dimen name="activity_vertical_margin">16dp</dimen>
+    <dimen name="nav_header_vertical_spacing">8dp</dimen>
+    <dimen name="nav_header_height">240dp</dimen>
+    <dimen name="fab_margin">16dp</dimen>
+    <dimen name="image_profile_width">130dp</dimen>
+    <dimen name="image_profile_heigth">130dp</dimen>
+    <dimen name="tv_name_size">26sp</dimen>
+    <dimen name="tv_email_size">16sp</dimen>
+    <dimen name="logout_heigth">30dp</dimen>
+    <dimen name="logout_text_size">16sp</dimen>
+    <dimen name="tv_logout_margimleft">20dp</dimen>
+    <dimen name="item_number_marghintop">17dp</dimen>
+    <dimen name="tv_number_heigth">20dp</dimen>
+    <dimen name="tv_number_width">25dp</dimen>
+    <dimen name="edt_email_login_margintop">308dp</dimen>
+    <dimen name="edt_mail_login_height">30dp</dimen>
+    <dimen name="edt_pass_login_heigh">30dp</dimen>
+    <dimen name="edt_email_login_layout_marginLeft">30dp</dimen>
+    <dimen name="edt_email_login_layout_marginRight">30dp</dimen>
+    <dimen name="edt_email_login_layout_paddingStart">10dp</dimen>
+    <dimen name="edt_email_login_layout_drawablePadding">20dp</dimen>
+    <dimen name="edt_pass_login_layout_marginLeft">30dp</dimen>
+    <dimen name="edt_pass_login_layout_marginRight">30dp</dimen>
+    <dimen name="edt_pass_login_layout_marginTop">10dp</dimen>
+    <dimen name="edt_pass_login_drawablePadding">25dp</dimen>
+    <dimen name="edt_pass_login_paddingStart">15dp</dimen>
+    <dimen name="edt_cb_login_layout_marginLeft">50dp</dimen>
+    <dimen name="edt_tv_login_layout_marginTop">7dp</dimen>
+    <dimen name="edt_tv_login_layout_marginLeft">50dp</dimen>
+    <dimen name="btn_login_layout_height">30dp</dimen>
+    <dimen name="btn_login_layout_marginLeft">30dp</dimen>
+    <dimen name="btn_login_layout_marginRight">30dp</dimen>
+</resources>
