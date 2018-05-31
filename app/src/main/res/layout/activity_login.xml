@@ -30,6 +30,7 @@
         android:layout_marginLeft="@dimen/edt_pass_login_layout_marginLeft"
         android:layout_marginRight="@dimen/edt_pass_login_layout_marginRight"
         android:background="@drawable/edit_name"
+        android:password="true"
         android:layout_marginTop="@dimen/edt_pass_login_layout_marginTop"
         android:drawableLeft="@mipmap/ic_lock_black_24dp"
         android:drawablePadding="@dimen/edt_pass_login_drawablePadding"

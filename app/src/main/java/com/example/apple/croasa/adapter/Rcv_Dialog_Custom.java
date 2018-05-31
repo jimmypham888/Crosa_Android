@@ -26,6 +26,8 @@ public class Rcv_Dialog_Custom extends RecyclerView.Adapter<Rcv_Dialog_Custom.Vi
 
     PlayMusic listeer;
 
+    Boolean isPlay = true;
+
     public Rcv_Dialog_Custom(ArrayList<Record> arrayList, Context context, PlayMusic listeer) {
         this.arrayList = arrayList;
         this.context = context;
@@ -42,20 +44,28 @@ public class Rcv_Dialog_Custom extends RecyclerView.Adapter<Rcv_Dialog_Custom.Vi
     }
 
     @Override
-    public void onBindViewHolder(@NonNull ViewHolder holder, final int position) {
+    public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
             holder.tv_name.setText(arrayList.get(position).getName());
             holder.tv_date.setText(arrayList.get(position).getDate());
             holder.btn_play.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    listeer.playMusic(arrayList.get(position).getPath());
+                    if (isPlay) {
+                        listeer.playMusic(arrayList.get(position).getPath());
+                        holder.tv_play.setText("Pause");
+                        isPlay = false;
+                    } else {
+                        holder.tv_play.setText("Play");
+                        isPlay = true;
+                        listeer.PauseMusic(arrayList.get(position).getPath());
+                    }
+
                 }
             });
 
             holder.btn_download.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
-                    listeer.PauseMusic(arrayList.get(position).getPath());
                 }
             });
     }

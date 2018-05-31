@@ -122,10 +122,9 @@ public class ListContacts_Fragment extends Fragment implements MainAllView , Cal
     public void onClick_Event_Call(String phone) {
         Toast.makeText(getContext(), "Call", Toast.LENGTH_SHORT).show();
         if (callHelper.getClient().isConnected()) {
-            String number = "84" + phone.substring(1,phone.length());
             Intent intent = new Intent(getContext(), OutgoingCallActivity.class);
             intent.putExtra("from", "84901701063");
-            intent.putExtra("to", "841675566677");
+            intent.putExtra("to", phone);
             intent.putExtra("is_video_call", false);
             startActivity(intent);
         } else {

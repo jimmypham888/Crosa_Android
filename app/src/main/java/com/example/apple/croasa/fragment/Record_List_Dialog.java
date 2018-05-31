@@ -70,10 +70,16 @@ public class Record_List_Dialog extends DialogFragment {
 
             @Override
             public void PauseMusic(String path) {
-
+                mediaPlayer.pause();
             }
         });
         rv.setAdapter(adapter);
         return view;
+    }
+
+    @Override
+    public void onDestroy() {
+        super.onDestroy();
+        mediaPlayer.stop();
     }
 }
