@@ -19,6 +19,12 @@
             android:background="?attr/colorPrimary"
             app:popupTheme="@style/AppTheme.PopupOverlay">
             <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Danh sách contact"
+                android:layout_gravity="center"
+                android:id="@+id/toolbar_title" />
+            <TextView
                 android:layout_width="25dp"
                 android:layout_height="25dp"
                 android:layout_gravity="right"

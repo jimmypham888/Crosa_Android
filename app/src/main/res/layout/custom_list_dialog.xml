@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/rl_item_record"
+    android:layout_width="wrap_content" android:layout_height="50dp">
+
+    <TextView
+        android:id="@+id/tv_dialog_custom_stt_"
+        android:text="01"
+        android:textSize="14sp"
+        android:gravity="center"
+        android:layout_alignParentLeft="true"
+        android:textColor="@android:color/white"
+        android:background="#f6bf77"
+        android:layout_below="@+id/tv_dialog_custom_stt"
+        android:layout_width="25dp"
+        android:layout_height="match_parent" />
+    <View
+        android:id="@+id/view_dialog_custom_v1_"
+        android:layout_width="1dp"
+        android:layout_toRightOf="@+id/tv_dialog_custom_stt_"
+        android:layout_height="match_parent"/>
+    <TextView
+        android:id="@+id/tv_dialog_custom_date_"
+        android:text="01/01/2018"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/view_dialog_custom_v1_"
+        android:textColor="@android:color/white"
+        android:background="#f6bf77"
+        android:gravity="center"
+        android:layout_width="80dp"
+        android:layout_height="match_parent" />
+    <TextView
+        android:id="@+id/tv_dialog_custom_namefile_"
+        android:text="abxjhjhhkhjkgyjg"
+        android:maxLines="1"
+        android:ellipsize="end"
+        android:textSize="14sp"
+        android:layout_toRightOf="@+id/tv_dialog_custom_date_"
+        android:textColor="@android:color/white"
+        android:background="#f6bf77"
+        android:gravity="center"
+        android:layout_width="100dp"
+        android:layout_height="match_parent" />
+    <View
+        android:id="@+id/view_dialog_custom_v2_"
+        android:layout_width="1dp"
+        android:layout_toRightOf="@+id/tv_dialog_custom_namefile_"
+        android:layout_height="match_parent"/>
+
+    <RelativeLayout
+        android:id="@+id/btn_play_record"
+        android:layout_toRightOf="@+id/view_dialog_custom_v2_"
+        android:layout_width="wrap_content"
+        android:background="#f6bf77"
+        android:gravity="center"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btn_dialog_custom_play"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_play"
+            android:layout_marginLeft="10dp"
+            android:gravity="center"
+            android:layout_width="15dp"
+            android:layout_height="19dp" />
+        <TextView
+            android:id="@+id/tv_btn_play"
+            android:background="#f6bf77"
+            android:layout_toRightOf="@+id/btn_dialog_custom_play"
+            android:layout_width="wrap_content"
+            android:text="play"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content" />=
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btn_download_record"
+        android:layout_width="match_parent"
+        android:background="#f6bf77"
+        android:gravity="center"
+        android:layout_toRightOf="@+id/btn_play_record"
+        android:layout_height="match_parent">
+        <Button
+            android:id="@+id/btn_dialog_custom_function_download"
+            android:textSize="14sp"
+            android:textColor="@android:color/white"
+            android:background="@drawable/btn_download"
+            android:layout_marginLeft="5dp"
+            android:gravity="center"
+            android:layout_width="15dp"
+            android:layout_height="19dp" />
+        <TextView
+            android:id="@+id/tv_btn_play_"
+            android:background="#f6bf77"
+            android:layout_toRightOf="@+id/btn_dialog_custom_function_download"
+            android:layout_width="wrap_content"
+            android:text="download"
+            android:textColor="@android:color/white"
+            android:layout_height="wrap_content" />
+
+    </RelativeLayout>
+
+</RelativeLayout>

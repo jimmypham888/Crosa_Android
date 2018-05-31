@@ -23,6 +23,8 @@ public class RetrofitHelper {
 
     private static final String TAG = RetrofitHelper.class.getSimpleName();
     private static final String BASE_URL = "http://45.124.94.45:9090/";
+    private static final String BASE_URL1 = "https://api.stringee.com/";
+//    private static final String BASE_URL = "https://www.androidhive.info/";
 
     public static <T> T createService(Class<T> sevices) {
         Retrofit retrofit = new Retrofit.Builder()
@@ -35,7 +37,7 @@ public class RetrofitHelper {
     }
     public static Retrofit provideRetrofit() {
         return new Retrofit.Builder()
-                .baseUrl(BASE_URL)
+                .baseUrl(BASE_URL1)
                 .addConverterFactory(new NullOnEmptyConverterFactory())
                 .addConverterFactory(GsonConverterFactory.create(getGson()))
                 .client(provideOkHttpClient())

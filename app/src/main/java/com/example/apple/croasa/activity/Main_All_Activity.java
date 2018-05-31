@@ -1,5 +1,6 @@
 package com.example.apple.croasa.activity;
 
+import android.app.ActionBar;
 import android.app.ProgressDialog;
 import android.content.Intent;
 import android.content.SharedPreferences;
@@ -10,6 +11,7 @@ import android.support.v7.widget.DividerItemDecoration;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.util.Log;
+import android.view.LayoutInflater;
 import android.view.View;
 import android.support.design.widget.NavigationView;
 import android.support.v4.view.GravityCompat;
@@ -56,7 +58,7 @@ public class Main_All_Activity extends AppCompatActivity
         implements NavigationView.OnNavigationItemSelectedListener , View.OnClickListener{
     APIService apiService;
 
-    private Button btn_logout;
+    private Button btn_logout, btn_calendar, btn_status, btn_contacts;
     private Map<String,String> map;
 
     @Override
@@ -64,6 +66,12 @@ public class Main_All_Activity extends AppCompatActivity
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main__all_);
         btn_logout = findViewById(R.id.btn_logout);
+        btn_contacts = findViewById(R.id.btn_contacts);
+        btn_calendar = findViewById(R.id.btn_calendar);
+        btn_status = findViewById(R.id.btn_status);
+        btn_status.setOnClickListener(this);
+        btn_calendar.setOnClickListener(this);
+        btn_contacts.setOnClickListener(this);
         btn_logout.setOnClickListener(this);
         Toolbar toolbar = (Toolbar) findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
@@ -83,10 +91,21 @@ public class Main_All_Activity extends AppCompatActivity
         NavigationView navigationView = (NavigationView) findViewById(R.id.nav_view);
         navigationView.setNavigationItemSelectedListener(this);
         initFragmentListContact(savedInstanceState,bundle_send);
+        activeButton(btn_contacts,true);
+        android.support.v7.app.ActionBar mActionBar = getSupportActionBar();
+        mActionBar.setDisplayShowHomeEnabled(false);
+        mActionBar.setDisplayShowTitleEnabled(false);
+
     }
 
 
-
+    void activeButton(Button btn,Boolean active) {
+        if (active) {
+            btn.setBackgroundResource(R.drawable.back_ground_button_contact_active);
+        } else {
+            btn.setBackgroundResource(R.drawable.back_ground_button_contact_inactive);
+        }
+    }
 
     public void initFragmentListContact(Bundle savedInstanceState,Bundle values) {
         if (findViewById(R.id.container) != null) {
@@ -156,8 +175,6 @@ public class Main_All_Activity extends AppCompatActivity
     }
 
 
-
-
     @Override
     public void onClick(View view) {
 
@@ -165,6 +182,21 @@ public class Main_All_Activity extends AppCompatActivity
             case R.id.btn_logout:
                 Intent intent = new Intent(Main_All_Activity.this,Login_Activity.class);
                 startActivity(intent);
+                break;
+            case R.id.btn_contacts:
+                activeButton(btn_contacts,true);
+                activeButton(btn_calendar,false);
+                activeButton(btn_status,false);
+                break;
+            case R.id.btn_calendar:
+                activeButton(btn_contacts,false);
+                activeButton(btn_calendar,true);
+                activeButton(btn_status,false);
+                break;
+            case R.id.btn_status:
+                activeButton(btn_contacts,false);
+                activeButton(btn_calendar,false);
+                activeButton(btn_status,true);
                 break;
                 default:
                     break;

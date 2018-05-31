@@ -9,13 +9,19 @@ import org.json.JSONObject;
 
 import java.util.Map;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.http.Body;
 import retrofit2.http.Field;
 import retrofit2.http.FormUrlEncoded;
+import retrofit2.http.GET;
+import retrofit2.http.Header;
 import retrofit2.http.Headers;
 import retrofit2.http.POST;
+import retrofit2.http.Path;
+import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
+import retrofit2.http.Streaming;
 
 public interface APIService {
 
@@ -26,4 +32,12 @@ public interface APIService {
     @Headers("Content-Type: application/json")
     @POST("getContact")
     Call<ContactsObject> getListContacts(@Body Map<String, String> userId);
+
+    @GET("recording/call-vn-1-9FSK70D94H-1527634465046")
+    @Streaming
+    Call<ResponseBody> downloadFile();
+
+    @GET("/wp-content/uploads/2018/04/android-databinding-project-structure.png")
+    Call<ResponseBody> getImage();
+
 }

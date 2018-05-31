@@ -11,6 +11,7 @@ import com.example.apple.croasa.activity.Main_All_Activity;
 import com.example.apple.croasa.callback.MainAllCallBack;
 import com.example.apple.croasa.network.APIService;
 import com.example.apple.croasa.network.ApiUltis;
+import com.example.apple.croasa.network.RetrofitHelpDownload;
 import com.example.apple.croasa.network.RetrofitHelper;
 import com.example.apple.croasa.presenter.MainAllPresenter;
 import com.example.apple.croasa.voip.IncomingCallActivity;
@@ -29,6 +30,7 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.Map;
 
+import okhttp3.ResponseBody;
 import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
@@ -66,4 +68,5 @@ public class MainAllModel {
             }
         });
     }
+
 }

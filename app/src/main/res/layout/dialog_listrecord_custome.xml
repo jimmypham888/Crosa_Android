@@ -1,0 +1,90 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent" android:layout_height="400dp">
+    
+    
+    <RelativeLayout
+        android:id="@+id/rl_custom_dialog_1"
+        android:layout_marginLeft="10dp"
+        android:layout_marginRight="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <TextView
+            android:id="@+id/tv_list_record_title"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textSize="26sp"
+            android:background="#e5942b"
+            android:text="Danh sách ghi âm "/>
+
+        <TextView
+            android:id="@+id/tv_dialog_custom_stt"
+            android:text="STT"
+            android:textSize="12sp"
+            android:gravity="center"
+            android:layout_alignParentLeft="true"
+            android:textColor="@android:color/white"
+            android:background="#f6bf77"
+            android:layout_below="@+id/tv_list_record_title"
+            android:layout_width="25dp"
+            android:layout_height="25dp" />
+        <View
+            android:id="@+id/view_dialog_custom_v1"
+            android:layout_width="1dp"
+            android:layout_below="@+id/tv_list_record_title"
+            android:layout_toRightOf="@+id/tv_dialog_custom_stt"
+            android:layout_height="25dp"/>
+        <TextView
+            android:id="@+id/tv_dialog_custom_date"
+            android:text="Ngày"
+            android:textSize="14sp"
+            android:layout_toRightOf="@+id/view_dialog_custom_v1"
+            android:textColor="@android:color/white"
+            android:background="#f6bf77"
+            android:gravity="center"
+            android:layout_below="@+id/tv_list_record_title"
+            android:layout_width="80dp"
+            android:layout_height="25dp" />
+        <TextView
+            android:id="@+id/tv_dialog_custom_namefile"
+            android:text="File ghi âm"
+            android:textSize="14sp"
+            android:layout_toRightOf="@+id/tv_dialog_custom_date"
+            android:textColor="@android:color/white"
+            android:background="#f6bf77"
+            android:gravity="center"
+            android:layout_below="@+id/tv_list_record_title"
+            android:layout_width="100dp"
+            android:layout_height="25dp" />
+        <View
+            android:id="@+id/view_dialog_custom_v2"
+            android:layout_width="1dp"
+            android:layout_below="@+id/tv_list_record_title"
+            android:layout_toRightOf="@+id/tv_dialog_custom_namefile"
+            android:layout_height="25dp"/>
+
+        <TextView
+            android:id="@+id/tv_dialog_custom_function"
+            android:text="Chức năng"
+            android:layout_alignParentRight="true"
+            android:textSize="14sp"
+            android:layout_toRightOf="@+id/view_dialog_custom_v2"
+            android:textColor="@android:color/white"
+            android:background="#f6bf77"
+            android:gravity="center"
+            android:layout_below="@+id/tv_list_record_title"
+            android:layout_width="match_parent"
+            android:layout_height="25dp" />
+        <android.support.v7.widget.RecyclerView
+            android:id="@+id/rcv_list_record"
+            android:layout_below="@+id/tv_dialog_custom_function"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+        </android.support.v7.widget.RecyclerView>
+    </RelativeLayout>
+
+</RelativeLayout>

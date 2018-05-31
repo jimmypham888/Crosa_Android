@@ -10,11 +10,21 @@ import android.widget.Toast;
 
 import com.example.apple.croasa.R;
 import com.example.apple.croasa.model.LoginObject;
+import com.example.apple.croasa.network.APIService;
+import com.example.apple.croasa.network.DownLoadRecord;
+import com.example.apple.croasa.network.RetrofitHelpDownload;
+import com.example.apple.croasa.network.RetrofitHelper;
 import com.example.apple.croasa.presenter.LoginPresenter;
 import com.example.apple.croasa.view.LoginView;
 
 import java.util.HashMap;
 import java.util.Map;
+
+import okhttp3.ResponseBody;
+import retrofit2.Call;
+import retrofit2.Callback;
+import retrofit2.Response;
+import retrofit2.http.Header;
 
 public class Login_Activity extends AppCompatActivity implements LoginView,
         View.OnClickListener{
@@ -33,7 +43,6 @@ public class Login_Activity extends AppCompatActivity implements LoginView,
         btn_login = findViewById(R.id.btn_login);
         edt_pass = findViewById(R.id.edt_pass);
         edt_user_name = findViewById(R.id.edt_email);
-
         btn_login.setOnClickListener(this);
     }
 

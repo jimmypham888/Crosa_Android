@@ -12,4 +12,5 @@
     <string name="edt_cb_login_layout_textHint">Duy trì đăng nhập</string>
     <string name="tv_login_text">quên mật khẩu</string>
     <string name="btn_login_text">ĐĂNG NHẬP</string>
+    <string name="token_stringee">"eyJjdHkiOiJzdHJpbmdlZS1hcGk7dj0xIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJTS04yUGZBOFBKNnNucXJwMlRzVnV2ZHo0T2N4NDRiMzRPLTE1MjcxNDcxOTQiLCJpc3MiOiJTS04yUGZBOFBKNnNucXJwMlRzVnV2ZHo0T2N4NDRiMzRPIiwiZXhwIjoxNTI5NzM5MTk0LCJ1c2VySWQiOiJqaW1teSJ9.y6SQnGnBG0f7Z5p3aIMqkE_DGwRYxluSVz6vb1Smj4E"</string>
 </resources>
