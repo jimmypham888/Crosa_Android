@@ -1,6 +1,7 @@
 package com.example.apple.croasa.network;
 
 import com.example.apple.croasa.model.ContactsObject;
+import com.example.apple.croasa.model.HistoryResule;
 import com.example.apple.croasa.model.LoginData;
 import com.google.gson.JsonObject;
 import com.google.gson.JsonParser;
@@ -22,6 +23,7 @@ import retrofit2.http.Path;
 import retrofit2.http.Query;
 import retrofit2.http.QueryMap;
 import retrofit2.http.Streaming;
+import retrofit2.http.Url;
 
 public interface APIService {
 
@@ -37,7 +39,14 @@ public interface APIService {
     @Streaming
     Call<ResponseBody> downloadFile();
 
+    @GET
+    @Streaming
+    Call<ResponseBody> downloadFileRecord(@Url String url);
+
     @GET("/wp-content/uploads/2018/04/android-databinding-project-structure.png")
     Call<ResponseBody> getImage();
+
+    @POST("/getAllHistoryCall")
+    Call<HistoryResule> getAllHistory(@Body Map<String,String>  number);
 
 }

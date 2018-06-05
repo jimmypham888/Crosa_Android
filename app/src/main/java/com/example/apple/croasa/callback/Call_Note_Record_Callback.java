@@ -9,7 +9,7 @@ public interface Call_Note_Record_Callback {
 
     public void onClick_Event_Note();
 
-    public void onClick_Event_Recored();
+    public void onClick_Event_Recored(String number);
 
     public void onClick_Item_ListView(View view, int position);
 

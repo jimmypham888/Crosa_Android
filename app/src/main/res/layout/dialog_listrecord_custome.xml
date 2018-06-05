@@ -1,16 +1,16 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent" android:layout_height="400dp">
+    android:layout_width="match_parent" android:layout_height="wrap_content">
     
     
     <RelativeLayout
         android:id="@+id/rl_custom_dialog_1"
-        android:layout_marginLeft="10dp"
-        android:layout_marginRight="10dp"
-        android:layout_marginTop="10dp"
+        android:layout_marginLeft="0dp"
+        android:layout_marginRight="0dp"
+        android:layout_marginTop="0dp"
         android:layout_marginBottom="20dp"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="wrap_content">
         <TextView
             android:id="@+id/tv_list_record_title"
             android:layout_width="match_parent"
@@ -23,7 +23,7 @@
         <TextView
             android:id="@+id/tv_dialog_custom_stt"
             android:text="STT"
-            android:textSize="12sp"
+            android:textSize="10sp"
             android:gravity="center"
             android:layout_alignParentLeft="true"
             android:textColor="@android:color/white"
@@ -40,7 +40,7 @@
         <TextView
             android:id="@+id/tv_dialog_custom_date"
             android:text="Ngày"
-            android:textSize="14sp"
+            android:textSize="10sp"
             android:layout_toRightOf="@+id/view_dialog_custom_v1"
             android:textColor="@android:color/white"
             android:background="#f6bf77"
@@ -51,13 +51,13 @@
         <TextView
             android:id="@+id/tv_dialog_custom_namefile"
             android:text="File ghi âm"
-            android:textSize="14sp"
+            android:textSize="10sp"
             android:layout_toRightOf="@+id/tv_dialog_custom_date"
             android:textColor="@android:color/white"
             android:background="#f6bf77"
             android:gravity="center"
             android:layout_below="@+id/tv_list_record_title"
-            android:layout_width="100dp"
+            android:layout_width="70dp"
             android:layout_height="25dp" />
         <View
             android:id="@+id/view_dialog_custom_v2"
@@ -70,7 +70,7 @@
             android:id="@+id/tv_dialog_custom_function"
             android:text="Chức năng"
             android:layout_alignParentRight="true"
-            android:textSize="14sp"
+            android:textSize="10sp"
             android:layout_toRightOf="@+id/view_dialog_custom_v2"
             android:textColor="@android:color/white"
             android:background="#f6bf77"

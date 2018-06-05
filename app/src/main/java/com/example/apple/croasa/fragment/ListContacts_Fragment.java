@@ -58,7 +58,7 @@ import retrofit2.Call;
 import retrofit2.Callback;
 import retrofit2.Response;
 
-public class ListContacts_Fragment extends Fragment implements MainAllView , Call_Note_Record_Callback, DownLoadFileView {
+public class ListContacts_Fragment extends Fragment implements MainAllView , Call_Note_Record_Callback {
 
     private static final String TAG = "ListContacts_Fragment";
     private RecyclerView recyclerView;
@@ -68,8 +68,6 @@ public class ListContacts_Fragment extends Fragment implements MainAllView , Cal
     private CallHelper callHelper;
 
     APIService apiService;
-
-    DownloadFilePresenter presenter;
 
 
 
@@ -87,9 +85,9 @@ public class ListContacts_Fragment extends Fragment implements MainAllView , Cal
                 map.put("id_user_tvts",loginObject.getId().toString());
                 mainAllPresenter.loadListContacts(map);
                 callHelper = new CallHelper(getActivity());
-                apiService = RetrofitHelpDownload.createService(APIService.class);
-                presenter = new DownloadFilePresenter(this);
-                presenter.downloadFile();
+//                apiService = RetrofitHelpDownload.createService(APIService.class);
+//                presenter = new DownloadFilePresenter(this);
+//                presenter.downloadFile();
             }
         }
         return view;
@@ -139,10 +137,10 @@ public class ListContacts_Fragment extends Fragment implements MainAllView , Cal
     }
 
     @Override
-    public void onClick_Event_Recored() {
+    public void onClick_Event_Recored(String phone) {
         Toast.makeText(getContext(), "Record", Toast.LENGTH_SHORT).show();
         FragmentManager fragmentManager = getFragmentManager();
-        Record_List_Dialog record_list_dialog = new Record_List_Dialog();
+        Record_List_Dialog record_list_dialog = new Record_List_Dialog(phone);
         record_list_dialog.show(fragmentManager,"dsd");
 
     }
@@ -167,11 +165,6 @@ public class ListContacts_Fragment extends Fragment implements MainAllView , Cal
         }
         rl.setVisibility(View.VISIBLE);
         btn.setVisibility(View.GONE);
-
-    }
-
-    @Override
-    public void showListFileDownload(String path) {
 
     }
 }

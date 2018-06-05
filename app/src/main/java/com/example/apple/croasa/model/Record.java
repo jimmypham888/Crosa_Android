@@ -1,33 +1,73 @@
 package com.example.apple.croasa.model;
 
+import com.google.gson.annotations.Expose;
+import com.google.gson.annotations.SerializedName;
+
 public class Record {
-    String name;
+    @SerializedName("call_id")
+    @Expose
+    private String callId;
+    @SerializedName("mobile_phone")
+    @Expose
+    private String mobilePhone;
+    @SerializedName("start_time")
+    @Expose
+    private String startTime;
+    @SerializedName("duration")
+    @Expose
+    private Integer duration;
+    @SerializedName("ring_time")
+    @Expose
+    private Integer ringTime;
+    @SerializedName("link_down_record")
+    @Expose
+    private String linkDownRecord;
 
-    String date;
-
-    String path;
-
-    public String getPath() {
-        return path;
+    public String getCallId() {
+        return callId;
     }
 
-    public void setPath(String path) {
-        this.path = path;
+    public void setCallId(String callId) {
+        this.callId = callId;
     }
 
-    public String getName() {
-        return name;
+    public String getMobilePhone() {
+        return mobilePhone;
     }
 
-    public void setName(String name) {
-        this.name = name;
+    public void setMobilePhone(String mobilePhone) {
+        this.mobilePhone = mobilePhone;
     }
 
-    public String getDate() {
-        return date;
+    public String getStartTime() {
+        return startTime;
     }
 
-    public void setDate(String date) {
-        this.date = date;
+    public void setStartTime(String startTime) {
+        this.startTime = startTime;
+    }
+
+    public Integer getDuration() {
+        return duration;
+    }
+
+    public void setDuration(Integer duration) {
+        this.duration = duration;
+    }
+
+    public Integer getRingTime() {
+        return ringTime;
+    }
+
+    public void setRingTime(Integer ringTime) {
+        this.ringTime = ringTime;
+    }
+
+    public String getLinkDownRecord() {
+        return linkDownRecord;
+    }
+
+    public void setLinkDownRecord(String linkDownRecord) {
+        this.linkDownRecord = linkDownRecord;
     }
 }

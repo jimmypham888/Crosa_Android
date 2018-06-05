@@ -110,9 +110,9 @@ public class OutgoingCallActivity extends AppCompatActivity implements View.OnCl
 
             if (isVideoCall) {
                 if (ContextCompat.checkSelfPermission(this,
-                        Manifest.permission.CAMERA)
+                        Manifest.permission.WRITE_EXTERNAL_STORAGE)
                         != PackageManager.PERMISSION_GRANTED) {
-                    lstPermissions.add(Manifest.permission.CAMERA);
+                    lstPermissions.add(Manifest.permission.WRITE_EXTERNAL_STORAGE);
                 }
             }
 
@@ -142,25 +142,6 @@ public class OutgoingCallActivity extends AppCompatActivity implements View.OnCl
                     isGranted = true;
                 }
             }
-        }
-        switch (requestCode) {
-            case REQUEST_PERMISSION_CALL:
-                if (!isGranted) {
-                    finish();
-                } else {
-                    makeCall();
-                }
-                break;
-            case REQUEST_PERMISSION_CAMERA:
-                if (isGranted) {
-                    enableOrDisableVideo();
-                }
-                break;
-            case REQUEST_PERMISSION_CAMERA_WHEN_ANSWER:
-                if (isGranted) {
-                    acceptCameraRequest();
-                }
-                break;
         }
     }
 

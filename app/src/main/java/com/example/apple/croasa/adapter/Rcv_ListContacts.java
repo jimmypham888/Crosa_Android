@@ -92,7 +92,7 @@ public class Rcv_ListContacts extends RecyclerView.Adapter<Rcv_ListContacts.View
         holder.btn_record.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                listener.onClick_Event_Recored();
+                listener.onClick_Event_Recored(arrayListContact.get(position).getPhone());
             }
         });
 

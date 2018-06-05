@@ -61,7 +61,7 @@ public class RetrofitHelpDownload {
                 .addInterceptor(new Interceptor() {
                     @Override
                     public Response intercept(Chain chain) throws IOException {
-                        Request request = chain.request().newBuilder().addHeader("X-STRINGEE-AUTH", "eyJjdHkiOiJzdHJpbmdlZS1hcGk7dj0xIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJTS04yUGZBOFBKNnNucXJwMlRzVnV2ZHo0T2N4NDRiMzRPLTE1MjcxNDcxOTQiLCJpc3MiOiJTS04yUGZBOFBKNnNucXJwMlRzVnV2ZHo0T2N4NDRiMzRPIiwiZXhwIjoxNTI5NzM5MTk0LCJ1c2VySWQiOiJqaW1teSJ9.y6SQnGnBG0f7Z5p3aIMqkE_DGwRYxluSVz6vb1Smj4E")
+                        Request request = chain.request().newBuilder().addHeader("X-STRINGEE-AUTH", "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6InN0cmluZ2VlLWFwaTt2PTEifQ.eyJqdGkiOiJTS04yUGZBOFBKNnNucXJwMlRzVnV2ZHo0T2N4NDRiMzRPLTE1MjgxNzM1NzQiLCJpc3MiOiJTS04yUGZBOFBKNnNucXJwMlRzVnV2ZHo0T2N4NDRiMzRPIiwiZXhwIjoxNTI4NTMzNTc0LCJ1c2VySWQiOiJqaW1teSIsInJlc3RfYXBpIjp0cnVlLCJpYXQiOjE1MjgxNzM1NzR9.D86iTEmPw-LfNVgL577cQFQCLg7gw2R6SU3QkmS36mE")
                                 .addHeader("Content-Type", "application/json").build();
                         return chain.proceed(request);
                     }

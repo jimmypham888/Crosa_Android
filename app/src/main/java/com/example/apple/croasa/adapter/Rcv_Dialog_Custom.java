@@ -1,8 +1,10 @@
 package com.example.apple.croasa.adapter;
 
 import android.content.Context;
+import android.os.Environment;
 import android.support.annotation.NonNull;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -15,12 +17,14 @@ import com.example.apple.croasa.R;
 import com.example.apple.croasa.callback.PlayMusic;
 import com.example.apple.croasa.model.Record;
 
+import java.io.File;
 import java.util.ArrayList;
+import java.util.List;
 
 public class Rcv_Dialog_Custom extends RecyclerView.Adapter<Rcv_Dialog_Custom.ViewHolder> {
 
 
-    ArrayList<Record> arrayList;
+    List<Record> arrayList;
 
     Context context;
 
@@ -28,7 +32,7 @@ public class Rcv_Dialog_Custom extends RecyclerView.Adapter<Rcv_Dialog_Custom.Vi
 
     Boolean isPlay = true;
 
-    public Rcv_Dialog_Custom(ArrayList<Record> arrayList, Context context, PlayMusic listeer) {
+    public Rcv_Dialog_Custom(List<Record> arrayList, Context context, PlayMusic listeer) {
         this.arrayList = arrayList;
         this.context = context;
         this.listeer = listeer;
@@ -45,19 +49,19 @@ public class Rcv_Dialog_Custom extends RecyclerView.Adapter<Rcv_Dialog_Custom.Vi
 
     @Override
     public void onBindViewHolder(@NonNull final ViewHolder holder, final int position) {
-            holder.tv_name.setText(arrayList.get(position).getName());
-            holder.tv_date.setText(arrayList.get(position).getDate());
+            holder.tv_name.setText(arrayList.get(position).getCallId());
+            holder.tv_date.setText(arrayList.get(position).getStartTime());
             holder.btn_play.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
                     if (isPlay) {
-                        listeer.playMusic(arrayList.get(position).getPath());
+                        listeer.playMusic(arrayList.get(position).getCallId());
                         holder.tv_play.setText("Pause");
                         isPlay = false;
                     } else {
                         holder.tv_play.setText("Play");
                         isPlay = true;
-                        listeer.PauseMusic(arrayList.get(position).getPath());
+                        listeer.PauseMusic(arrayList.get(position).getCallId());
                     }
 
                 }
@@ -66,8 +70,22 @@ public class Rcv_Dialog_Custom extends RecyclerView.Adapter<Rcv_Dialog_Custom.Vi
             holder.btn_download.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View view) {
+                    listeer.DownLoadMusic(arrayList.get(position).getLinkDownRecord(),arrayList.get(position).getCallId());
                 }
             });
+
+//        String path = Environment.getExternalStorageDirectory().toString() + "/Crosa Record";
+//        File directory = new File(path);
+//        File[] files = directory.listFiles();
+//        ArrayList<Record> arr = new ArrayList<>();
+//        for (int i = 0; i < arrayList.size(); i++) {
+//            for (int j = 0; j < files.length; j++) {
+//                String fileName = files[j].getName();
+//                if (fileName.equalsIgnoreCase(arrayList.get(i).getCallId())) {
+//                    holder.btn_download.setVisibility(View.GONE);
+//                }
+//            }
+//        }
     }
 
     @Override

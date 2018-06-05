@@ -8,4 +8,6 @@ public interface PlayMusic {
     public void playMusic(String path);
 
     public void PauseMusic(String path);
+
+    public void DownLoadMusic(String path,String nameRecord);
 }

@@ -30,8 +30,8 @@ public class CallHelper {
         public static StringeeClient client;
     private String to = "";
     public static Map<String, StringeeCall> callsMap = new HashMap<>();
-    private String accessToken = "eyJjdHkiOiJzdHJpbmdlZS1hcGk7dj0xIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJTS2dkYk5GbjVCR0pIa2JLNDJ3OUFEQTk3N2N2UDJwZlp0LTE1Mjc0MzUzNjkiLCJpc3MiOiJTS2dkYk5GbjVCR0pIa2JLNDJ3OUFEQTk3N2N2UDJwZlp0IiwiZXhwIjoxNTMwMDI3MzY5LCJ1c2VySWQiOiJkdW9uZ19kbyJ9.LdJ1_4y3EBTZZr5n7CKXd4B3zrQcF5rhqjjugcTZqxE"; // replace your access token here.
-
+//    private String accessToken = "eyJjdHkiOiJzdHJpbmdlZS1hcGk7dj0xIiwidHlwIjoiSldUIiwiYWxnIjoiSFMyNTYifQ.eyJqdGkiOiJTS2dkYk5GbjVCR0pIa2JLNDJ3OUFEQTk3N2N2UDJwZlp0LTE1Mjc0MzUzNjkiLCJpc3MiOiJTS2dkYk5GbjVCR0pIa2JLNDJ3OUFEQTk3N2N2UDJwZlp0IiwiZXhwIjoxNTMwMDI3MzY5LCJ1c2VySWQiOiJkdW9uZ19kbyJ9.LdJ1_4y3EBTZZr5n7CKXd4B3zrQcF5rhqjjugcTZqxE"; // replace your access token here.
+    private String accessToken = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCIsImN0eSI6InN0cmluZ2VlLWFwaTt2PTEifQ.eyJqdGkiOiJTS04yUGZBOFBKNnNucXJwMlRzVnV2ZHo0T2N4NDRiMzRPLTE1MjgxNzM1NzQiLCJpc3MiOiJTS04yUGZBOFBKNnNucXJwMlRzVnV2ZHo0T2N4NDRiMzRPIiwiZXhwIjoxNTI4NTMzNTc0LCJ1c2VySWQiOiJqaW1teSIsInJlc3RfYXBpIjp0cnVlLCJpYXQiOjE1MjgxNzM1NzR9.D86iTEmPw-LfNVgL577cQFQCLg7gw2R6SU3QkmS36mE";
     private EditText etTo;
     private TextView tvUserId;
     private ProgressDialog progressDialog;
